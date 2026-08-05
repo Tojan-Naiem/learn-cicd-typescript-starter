@@ -20,7 +20,7 @@
             - name: Run test
               run: npm run test -- --coverage
     styles:
-      name: Stu;es
+      name: Style
       runs-on: ubuntu-latest
       steps: 
         - name: Check out code
@@ -34,4 +34,5 @@
 
         - name: format the style
           run: npm run format:check
+
 
