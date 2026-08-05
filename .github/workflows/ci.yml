@@ -34,5 +34,7 @@
 
         - name: format the style
           run: npm run format:check
+        - name: lint the code
+          run: npm run lint
 
 
