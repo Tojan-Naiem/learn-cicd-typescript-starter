@@ -15,6 +15,8 @@
               uses: actions/setup-node@v5
               with:
                 node-version: 22
-            - name: print version
-              run: node --version
+            - name: Install dependencies
+              run: npm ci
+            - name: Run test
+              run: npm un test
 
