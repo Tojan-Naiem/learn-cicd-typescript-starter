@@ -40,6 +40,12 @@ jobs:
         run: |
           gcloud builds submit \
             --tag us-central1-docker.pkg.dev/fifth-base-500912-i9/notely-ar-repo/notely:latest .
+
+      - name: Run database migrations
+        run: npm run db:migrate
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+     
       - name: Deploy to Cloud Run
         run: |
           gcloud run deploy notely \
@@ -48,4 +54,3 @@ jobs:
             --allow-unauthenticated \
             --project fifth-base-500912-i9 \
             --max-instances=4
-
