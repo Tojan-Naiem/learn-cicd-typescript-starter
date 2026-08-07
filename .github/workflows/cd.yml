@@ -54,5 +54,3 @@ jobs:
             --allow-unauthenticated \
             --project fifth-base-500912-i9 \
             --max-instances=4
-
-
