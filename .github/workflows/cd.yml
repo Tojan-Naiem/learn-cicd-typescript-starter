@@ -49,3 +49,5 @@ jobs:
             --project fifth-base-500912-i9 \
             --max-instances=4
 
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
